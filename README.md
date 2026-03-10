@@ -31,8 +31,8 @@ A modern e-commerce platform for Allora Boutique featuring AI-powered product re
 - **Sentence Transformers**: For computing similarity scores
 - **scikit-learn**: For cosine similarity calculations
 
-## Project Structure
 
+<<<<<<< HEAD
 ```
 allora shopping brand/
 ├── frontend/                 # React application
@@ -169,6 +169,8 @@ Use your database credentials to connect with HeidiSQL:
 ### Orders
 - `POST /api/orders` - Create new order
 - `GET /api/orders/:id` - Get order details
+=======
+>>>>>>> 4ed5e1f13f33de050d3c0a0e210062c383785206
 
 ## How AI Recommendations Work
 
@@ -185,23 +187,6 @@ The system uses OpenAI's CLIP (Contrastive Language-Image Pre-training) model:
 ## Adding Products with AI
 
 To add products with automatic similar product detection:
-
-```python
-# Example: Add a product with image embedding
-import requests
-
-data = {
-    "name": "Beautiful Kurti",
-    "description": "Elegant cotton kurti with dupatta",
-    "price": 1299.00,
-    "category": "Kurti-Dupatta",
-    "image_path": "path/to/image.jpg",  # Local path to generate embedding
-    "image_url": "/images/kurti.jpg",   # Public URL for display
-    "stock": 10
-}
-
-response = requests.post("http://localhost:5000/api/products", json=data)
-```
 
 ## Future Enhancements
 
