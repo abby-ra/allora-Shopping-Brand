@@ -71,19 +71,19 @@ allora shopping brand/
 2. **Connect to MySQL using HeidiSQL**:
    - Host: `localhost`
    - Port: `3306`
-   - Username: `allora_admin`
-   - Password: `allora123`
+   - Username: `your_db_user` (you choose this)
+   - Password: `your_secure_password` (you choose this)
    - Database: `allora_boutique`
 
 3. **Create the database and user**:
    ```sql
    CREATE DATABASE allora_boutique;
-   CREATE USER 'allora_admin'@'localhost' IDENTIFIED BY 'allora123';
-   GRANT ALL PRIVILEGES ON allora_boutique.* TO 'allora_admin'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
+CREATE USER 'your_db_user'@'localhost' IDENTIFIED BY 'your_secure_password';
+GRANT ALL PRIVILEGES ON allora_boutique.* TO 'your_db_user'@'localhost';
+FLUSH PRIVILEGES;
+```
 
-4. **Run the schema script**:
+**⚠️ Security Note:** Replace `your_db_user` and `your_secure_password` with your own secure values!
    - Open HeidiSQL
    - Connect to your MySQL server
    - Load and execute: `backend/database/schema.sql`
@@ -107,12 +107,11 @@ allora shopping brand/
    ```
 
 4. **Configure environment variables**:
-   - Edit `.env` file with your database credentials
-   - Default values:
+   - Copy `.env.example` to `.env` and edit with YOUR database credentials:
      - DB_HOST=localhost
      - DB_PORT=3306
-     - DB_USER=allora_admin
-     - DB_PASSWORD=allora123
+     - DB_USER=your_db_user
+     - DB_PASSWORD=your_secure_password
      - DB_NAME=allora_boutique
 
 5. **Run the Flask server**:
@@ -143,12 +142,12 @@ allora shopping brand/
 
 ## Database Credentials
 
-Use these credentials to connect with HeidiSQL:
+Use your database credentials to connect with HeidiSQL:
 
 - **Host**: `localhost`
 - **Port**: `3306`
-- **Username**: `allora_admin`
-- **Password**: `allora123`
+- **Username**: Your database user (from setup)
+- **Password**: Your database password (from setup)
 - **Database**: `allora_boutique`
 
 ## API Endpoints

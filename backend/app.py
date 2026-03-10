@@ -67,9 +67,8 @@ if __name__ == '__main__':
         print(f"\n=== Database Connection Details ===")
         print(f"Host: {os.getenv('DB_HOST')}")
         print(f"Port: {os.getenv('DB_PORT')}")
-        print(f"Username: {os.getenv('DB_USER')}")
-        print(f"Password: {os.getenv('DB_PASSWORD')}")
         print(f"Database: {os.getenv('DB_NAME')}")
+        print(f"Status: Connected ✓")
         print(f"===================================\n")
     
     # Run the app

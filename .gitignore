@@ -1,36 +1,69 @@
 # Dependencies
 node_modules/
 venv/
+env/
+ENV/
 __pycache__/
+*.pyc
+*.pyo
 
-# Environment files
+# Environment files - SENSITIVE
 .env
-*.env.local
+.env.local
+.env.*.local
+*.env
+backend/.env
+frontend/.env
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.bak
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Logs
 *.log
+logs/
 
 # Build
 build/
 dist/
 
-# Uploads
+# Uploads - User generated content
 uploads/
+*.jpg
+*.jpeg
+*.png
+*.gif
+backend/uploads/
 
-# Database
+# Database - SENSITIVE
 *.db
 *.sqlite3
+*.sql.backup
 
 # Model cache
 .cache/
 models/
+.transformers_cache/
+huggingface/
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Private notes
+PRIVATE.md
+TODO_PRIVATE.md
+credentials.txt
+SETUP_GUIDE.md
+DATABASE_SETUP.md
+QUICK_START.md
